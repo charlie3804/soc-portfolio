@@ -33,5 +33,4 @@ More projects (Splunk SIEM detections, full incident response simulation) are be
 
 - Email: carlosfigueroa.3804@gmail.com
 - Location: La Plata, Buenos Aires, Argentina (open to remote roles)
-- Portfolio: (agregá acá el link a tu repo de GitHub una vez publicado)
 - LinkedIn: (agregá acá el link a tu perfil una vez optimizado)
