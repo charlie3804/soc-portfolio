@@ -5,6 +5,7 @@ Based in La Plata, Argentina. Google Cybersecurity Professional Certificate hold
 
 ## Skills
 
+- **SIEM:** Splunk Enterprise — log ingestion, SPL searching, alert triage, timeline reconstruction, scheduled detection alerts, dashboards
 - **Networking:** TCP/IP, OSI model, subnetting/CIDR, DNS, DHCP, common ports and protocols (HTTP/S, FTP, SSH, SMTP), ICMP diagnostics
 - **Reconnaissance:** Nmap (port scanning, service/version detection)
 - **Packet analysis:** Wireshark, tcpdump — display filters, TCP stream reconstruction, DNS/HTTP inspection, object extraction, beaconing/C2 detection
@@ -12,7 +13,6 @@ Based in La Plata, Argentina. Google Cybersecurity Professional Certificate hold
 - **Incident investigation:** evidence correlation, IOC identification, MITRE-aligned incident reporting
 - **Governance/Compliance:** NIST CSF, PCI DSS, GDPR, SOC — risk assessment and controls review
 - **Databases:** SQL filtering (`WHERE`, `AND`, `OR`, `NOT`, `LIKE`) for log and access investigation
-- **In progress:** Splunk SPL, dashboards, detection rules, alerting (SIEM)
 - **Platforms:** TryHackMe (SOC Level 1 path), Blue Team Labs Online
 
 ## Projects
@@ -26,8 +26,9 @@ Based in La Plata, Argentina. Google Cybersecurity Professional Certificate hold
 | 5 | [Linux File Permissions Audit](./05-linux-permissions-audit) | Least-privilege remediation with chmod | [README](./05-linux-permissions-audit/README.md) |
 | 6 | [Security Controls & Compliance Assessment — Botium Toys](./06-botium-toys-controls-compliance) | NIST CSF risk assessment, PCI DSS/GDPR/SOC compliance review | [README](./06-botium-toys-controls-compliance/README.md) |
 | 7 | [DNS Service Outage — Traffic Analysis & Incident Report](./07-dns-icmp-outage-analysis) | tcpdump analysis, DNS/UDP/ICMP protocol identification | [README](./07-dns-icmp-outage-analysis/README.md) |
+| 8 | [Splunk SIEM — Linux sudo Brute-Force Detection](./08-splunk-brute-force-detection) | Splunk ingestion, SPL investigation, scheduled alert, SOC dashboard, MITRE T1110 | [README](./08-splunk-brute-force-detection/README.md) |
 
-More projects (Splunk SIEM detections, full incident response simulation) are being added as the training plan progresses.
+More projects (Wazuh, Microsoft Sentinel, full incident response simulation) are being added as the training plan progresses.
 
 ## Contact
 
