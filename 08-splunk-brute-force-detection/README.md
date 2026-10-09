@@ -1,8 +1,8 @@
 # Splunk SIEM — Linux sudo Brute-Force Detection
 
-**Author:** Charlie Figueroa
-**Tools:** Splunk Enterprise 10.6.0.5 · Ubuntu on WSL2 · SPL · Linux `auth.log`
-**Skills shown:** log ingestion, SPL searching, alert triage, timeline reconstruction, detection engineering (scheduled alerts), SIEM troubleshooting, dashboarding
+- **Author:** Charlie Figueroa
+- **Tools:** Splunk Enterprise 10.6.0.5 · Ubuntu on WSL2 · SPL · Linux `auth.log`
+- **Skills shown:** log ingestion, SPL searching, alert triage, timeline reconstruction, detection engineering (scheduled alerts), SIEM troubleshooting, dashboarding
 
 ![SOC dashboard](screenshots/00-dashboard-soc-linux-auth.png)
 
