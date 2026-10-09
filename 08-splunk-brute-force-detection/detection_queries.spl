@@ -1,0 +1,44 @@
+``` Splunk Enterprise 10.6.0.5 — index=linux_logs, sourcetype=linux_secure, source=/var/log/auth.log ```
+
+``` 1. Ingestion check — total events ```
+index=linux_logs | stats count
+
+``` 2. Filter failed authentications (PAM failure + sudo summary line) ```
+index=linux_logs ("authentication failure" OR "incorrect password")
+
+``` 3. Clean table for triage ```
+index=linux_logs ("authentication failure" OR "incorrect password")
+| table _time host user COMMAND
+
+``` 4. Who attacked which account (ruser = requesting user, user = target account) ```
+index=linux_logs "authentication failure"
+| stats count by ruser, user
+| sort - count
+
+``` 5. Reconstruct the timeline: failures followed by a root session ```
+index=linux_logs ("authentication failure" OR "incorrect password" OR "session opened")
+| sort _time
+| table _time user ruser COMMAND _raw
+
+``` 6. Attack over time (baseline vs. spike) ```
+index=linux_logs ("authentication failure" OR "incorrect password")
+| timechart span=1m count
+
+``` 7. Scope the attack window (first seen / last seen) ```
+index=linux_logs "authentication failure"
+| stats min(_time) as first_seen max(_time) as last_seen count by ruser
+| convert ctime(first_seen) ctime(last_seen)
+
+``` 8. Scheduled alert: "Brute Force - sudo auth failures" (cron */5, last 5 min, trigger if results > 0, severity High) ```
+index=linux_logs ("authentication failure" OR "incorrect password")
+| stats count by host
+| where count >= 2
+
+``` 9. Verify the alert actually ran and fired (Splunk internal scheduler log) ```
+index=_internal sourcetype=scheduler savedsearch_name="Brute Force - sudo auth failures"
+| table _time status result_count alert_actions
+
+``` 10. Dashboard panels — "SOC - Linux Auth Monitoring" (fixed 7-day window inside each search) ```
+index=linux_logs earliest=-7d ("authentication failure" OR "incorrect password") | stats count
+index=linux_logs earliest=-7d ("authentication failure" OR "incorrect password") | timechart span=1h count
+index=linux_logs earliest=-7d "authentication failure" | stats count by ruser, user | sort - count
