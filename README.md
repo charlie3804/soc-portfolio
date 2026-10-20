@@ -6,6 +6,8 @@ Based in La Plata, Argentina. Google Cybersecurity Professional Certificate hold
 ## Skills
 
 - **SIEM:** Splunk Enterprise — log ingestion, SPL searching, alert triage, timeline reconstruction, scheduled detection alerts, dashboards
+- **SIEM / XDR:** Wazuh — deployment, Windows agent enrollment, alert triage, rule-based correlation (brute force), MITRE ATT&CK validation
+- **Windows security:** Event IDs (4624, 4625, 4672, 4688, 4720, 1102), Logon Types, failure SubStatus codes, PowerShell
 - **Networking:** TCP/IP, OSI model, subnetting/CIDR, DNS, DHCP, common ports and protocols (HTTP/S, FTP, SSH, SMTP), ICMP diagnostics
 - **Reconnaissance:** Nmap (port scanning, service/version detection)
 - **Packet analysis:** Wireshark, tcpdump — display filters, TCP stream reconstruction, DNS/HTTP inspection, object extraction, beaconing/C2 detection
@@ -27,8 +29,9 @@ Based in La Plata, Argentina. Google Cybersecurity Professional Certificate hold
 | 6 | [Security Controls & Compliance Assessment — Botium Toys](./06-botium-toys-controls-compliance) | NIST CSF risk assessment, PCI DSS/GDPR/SOC compliance review | [README](./06-botium-toys-controls-compliance/README.md) |
 | 7 | [DNS Service Outage — Traffic Analysis & Incident Report](./07-dns-icmp-outage-analysis) | tcpdump analysis, DNS/UDP/ICMP protocol identification | [README](./07-dns-icmp-outage-analysis/README.md) |
 | 8 | [Splunk SIEM — Linux sudo Brute-Force Detection](./08-splunk-brute-force-detection) | Splunk ingestion, SPL investigation, scheduled alert, SOC dashboard, MITRE T1110 | [README](./08-splunk-brute-force-detection/README.md) |
+| 9 | [Wazuh SIEM — Windows Brute-Force Detection](./09-wazuh-windows-brute-force-detection) | Agent enrollment, alert triage, Event ID 4625 analysis, correlation rule 60204, MITRE T1110 | [README](./09-wazuh-windows-brute-force-detection/README.md) |
 
-More projects (Wazuh, Microsoft Sentinel, full incident response simulation) are being added as the training plan progresses.
+More projects (Microsoft Sentinel, Windows process and persistence analysis, full incident response simulation) are being added as the training plan progresses.
 
 ## Contact
 
